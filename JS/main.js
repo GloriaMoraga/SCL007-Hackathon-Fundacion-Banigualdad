@@ -4,12 +4,18 @@ import {enviarConvalidacionAFirebase, readPost,guardandoComentarios, deletePost,
 window.onload = () =>{     
       checkAuthState((firebaseUser) => {
          if(firebaseUser){
-            // document.getElementById('loginRegister').style.display ="none";
-            // document.getElementById('btnLogout').style.display = "block"; 
+            document.getElementById('login').style.display ="none";
+            document.getElementById('timeline').style.display = "block"; 
+            document.getElementById('home').style.display='none';
+            document.getElementById('footer_page').style.display='block';
+            
+
+
             readPostFromDatabase();
             }else{
-            // document.getElementById('loginRegister').style.display ="block";
-            // document.getElementById('btnLogout').style.display = "none";
+            document.getElementById('home').style.display ="block";
+            document.getElementById('profile').style.display='none';
+            document.getElementById('footer_page').style.display='none'
          }   
       });
 
@@ -111,12 +117,12 @@ window.onload = () =>{
 
       document.getElementById('btnhome3').addEventListener('click', () =>{
       document.getElementById('home').style.display='block';
-      document.getElementById('handMade').style.display='none'
+      document.getElementById('foodCategory').style.display='none'
       })
 
       document.getElementById('btnhome4').addEventListener('click', () =>{
       document.getElementById('home').style.display='block';
-      document.getElementById('terapyAndBeauty').style.display='none'
+      document.getElementById('handMade').style.display='none'
       })
 
    }
@@ -130,7 +136,7 @@ const registerWithEmailAndPassword = () => {
    registerUser(emailUser, passwordUser);
 
 };
-document.getElementById('registerButton').addEventListener('click', registerWithEmailAndPassword);
+// document.getElementById('registerButton').addEventListener('click', registerWithEmailAndPassword);
 
 
 //Iniciar Sesión correo y contraseña
