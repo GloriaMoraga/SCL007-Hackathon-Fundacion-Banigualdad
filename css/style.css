@@ -1,4 +1,7 @@
 /* estilos del login */
+html{
+    margin:0
+}
 .container {
     justify-content: center;
 }
@@ -242,12 +245,9 @@ img.card-img-top{
   }
   .icons-footer a:focus,
   .icons-footer a:hover{
-    color: #884EA0;
+    color: #2483c2;
   }
 
-  .active{
-    color: #884EA0;
-  }
 
   .boxicon_nav{
       display: flex;
@@ -312,8 +312,8 @@ padding:5px;
 
 .card-one{
   position: relative;
-  width: 80%;
-  margin: 10%;
+  width: 90%;
+  margin: 5%;
   background: #fff;
   box-shadow: 0 0 60px 2px rgba(0,0,0,.10);
 
@@ -493,12 +493,12 @@ padding:5px;
     .box-header{
         width: 100%;
         height: 80px;
-        background-color: #8ac53f80;
+        background-color: #dee9f4;
     }
     .name-post {
       margin-left: 100px;
       font-size: 26px;
-      color: #fff;
+      color: #666;
       padding-top: 15px;
     }
 
@@ -515,12 +515,9 @@ padding:5px;
   }  
        .avatar_post{
         position: absolute;
-        left: 5%;
-        top: -7px;
-        margin-left: -54px;
-        z-index: 5;
-        width: 100px;
-        height: 100px;
+        
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
         overflow: hidden;
         background: #c8c;
@@ -535,7 +532,7 @@ padding:5px;
           -ms-transform: translate(-50%, -50%);
           -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-          width: 100px;
+          width: 80px;
           height: auto;
         }  
        .box-content{
@@ -604,7 +601,8 @@ padding:5px;
 .contenidopost{
     width: 70%;
     float:left;
-    padding: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
 
 
 
@@ -634,3 +632,23 @@ padding:5px;
     display: none;
 }
 
+.left
+{float: left;}
+
+.icon-post{
+    font-size:18px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.text-color-carusel{
+    color:#2483c2;
+    text-align: center;
+}
+
+.card-style{
+    border-radius: 20px 20px 20px 20px!important;
+-moz-border-radius: 20px 20px 20px 20px!important;
+-webkit-border-radius: 20px 20px 20px 20px!important;
+box-shadow:0 0 60px 12px rgba(0, 0, 0, 0.08)!important;
+
+}
