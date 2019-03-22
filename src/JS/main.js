@@ -1,5 +1,6 @@
 import {checkAuthState, registerUser, loginUserWithEmail, signOut} from './auth.js';
-import {enviarConvalidacionAFirebase, readPost,guardandoComentarios, deletePost, biography,likePost, likeCount} from './index.js'
+import {enviarConvalidacionAFirebase, readPost,guardandoComentarios, deletePost, biography,likePost, likeCount} from './index.js';
+
 window.onload = () =>{     
       checkAuthState((firebaseUser) => {
          if(firebaseUser){
@@ -89,7 +90,7 @@ const name = firebase.auth().currentUser.displayName;
       readPost((coment)=>{ 
        newcoments.innerHTML = 
          `<div class="cards-container" id= ${coment.key}>
-           <div class="card card-one">
+           <div class="card card-one card-style">
                        
                            <div class='box-header'>
                             <div class='avatar_post'>
@@ -103,30 +104,30 @@ const name = firebase.auth().currentUser.displayName;
                                  <h3>${coment.val().title}</h3>          
                                  <p>${coment.val().body}</p>
                                  <h6>Canal: #${coment.val().hashtag}</h6>
-                                 </div>
+                               </div>
 
                                  <div class="contenidopost-img">
                                  <img class="img-post" src='${coment.val().imagen}'>
-                                  </div>
+                                 </div>
                            </div>
                           
 
-                              <div class='row'>
+                              <div class='row icon-post'>
                                <div class='likes col alinear' id='likePost${coment.key}'>
                                <i class='far fa-thumbs-up'></i>
                                <span id= 'countLike${coment.key}'></span> 
-                               <p class='iconmovile'>Me gusta</p>
+                               
                                </div>
                                
                                <div class='comments_home col alinear' id='${coment.key}'>
                                <i data-toggle="collapse" href="#collapseExample"  class="far fa-comment"></i>
-                               <p class='iconmovile'>Comentar</p>
+                               
                                </div>
                           
                                <div class='borrar col  alinear' id='btn${coment.key}' userpp=${coment.key} class='borrar'>
                                <i class="far fa-trash-alt"></i>
-                               <p class='iconmovile'>Borrar</p>
-                               </div>
+                              </div>
+
                                </div>
 
                                <div class="collapse" id="collapseExample">
@@ -477,8 +478,5 @@ document.getElementById('moreproduct').addEventListener('click', () =>{
    document.getElementById('viewStore').style.display='block';
 
 })
-
-
-
 
 
