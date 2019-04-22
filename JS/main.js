@@ -8,6 +8,8 @@ window.onload = () =>{
             document.getElementById('timeline').style.display = "block"; 
             document.getElementById('home').style.display='none';
             document.getElementById('footer_page').style.display='block';
+            document.getElementById('vitrinaEmprendedor').style.display='none';
+         
             
 
 
@@ -16,6 +18,8 @@ window.onload = () =>{
             document.getElementById('home').style.display ="block";
             document.getElementById('profile').style.display='none';
             document.getElementById('footer_page').style.display='none'
+            document.getElementById('vitrinaEmprendedor').style.display='none';
+            document.getElementById('timeline').style.display = "none"; 
          }   
       });
 
@@ -38,12 +42,13 @@ window.onload = () =>{
          document.getElementById('profile').style.display='none';
          document.getElementById('serviceCategory').style.display='block';
          document.getElementById('foodCategory').style.display='block';
-         document.getElementById('handMade').style.display='block';
+         document.getElementById('handMade').style.display='none';
          document.getElementById('terapyAndBeauty').style.display='block';
       })
 
       document.getElementById('btntimeline').addEventListener('click', () =>{
          document.getElementById('timeline').style.display='block';
+         document.getElementById('index_page').style.display='block';
          document.getElementById('home').style.display='none';
          document.getElementById('profile').style.display='none';
          document.getElementById('products').style.display='none';
@@ -94,6 +99,15 @@ window.onload = () =>{
             
       })
 
+      document.getElementById('passUser').addEventListener('click', ()=>{
+        document.getElementById('contraseña').style.display='block';
+        document.getElementById('borrarcontra').style.display='none';
+   
+              
+        })
+
+     
+
       document.getElementById('crafts').addEventListener('click', ()=>{
       document.getElementById('handMade').style.display='block';
       document.getElementById('home').style.display='none';
@@ -124,6 +138,37 @@ window.onload = () =>{
       document.getElementById('home').style.display='block';
       document.getElementById('handMade').style.display='none'
       })
+
+      document.getElementById('crafts').addEventListener("click", (event) => {
+         event.preventDefault();
+         document.getElementById('handMade').style.display="block";
+         document.getElementById('serviceCategory').style.display="none";
+         document.getElementById('foodCategory').style.display="none";
+         document.getElementById('terapyAndBeauty').style.display="none";
+      });
+      document.getElementById('service').addEventListener("click", (event) => {
+         event.preventDefault();
+         document.getElementById('handMade').style.display="none";
+         document.getElementById('serviceCategory').style.display="block";
+         document.getElementById('foodCategory').style.display="none";
+         document.getElementById('terapyAndBeauty').style.display="none";
+
+        
+      });
+      document.getElementById('food').addEventListener("click", (event) => {
+         event.preventDefault();
+         document.getElementById('handMade').style.display="none";
+         document.getElementById('serviceCategory').style.display="none";
+         document.getElementById('foodCategory').style.display="block";
+         document.getElementById('terapyAndBeauty').style.display="none";
+      });
+      document.getElementById('therapy').addEventListener("click", (event) => {
+         event.preventDefault();
+         document.getElementById('handMade').style.display="none";
+         document.getElementById('serviceCategory').style.display="none";
+         document.getElementById('foodCategory').style.display="none";
+         document.getElementById('terapyAndBeauty').style.display="block";
+      });
 
    }
 

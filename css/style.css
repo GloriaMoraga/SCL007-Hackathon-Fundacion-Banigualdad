@@ -6,6 +6,11 @@ html{
     justify-content: center;
 }
 
+.banner-item{
+  width: 100%;
+  margin-top:30px;
+  margin-bottom: 50px;
+}
 
 .btnSignUp{
     width: 100%;
@@ -25,9 +30,18 @@ html{
     opacity: 0.6;
     transition: 0.4s;
 }
+#loginOrRegister{
+  padding: 20px;
+}
+#contraseña{
+  display: none;
+}
+
 
 #login{
     display: none;
+    padding: 20px;
+    margin-top: 60px;
 }
 
 .img-responsive{
@@ -61,8 +75,8 @@ html{
 }
 
 #logotype{
-    margin: 1rem;
-    margin-bottom: 1rem;
+  background-color: #fff;
+  padding: 10px;
 }
 
 .map{
@@ -128,9 +142,7 @@ input.form-control.form-control-sm.mr-3.w-75{
 }
 
 .btncategory{
-left: 15%;
-display: inline;
-position: relative;
+padding: 10px;
 }
 
 /* productos y servicios */
@@ -505,10 +517,10 @@ padding:5px;
         background-color: #dee9f4;
     }
     .name-post {
-      margin-left: 100px;
-      font-size: 26px;
+      margin-left: 80px;
+      font-size: 20px;
       color: #666;
-      padding-top: 15px;
+      padding-top: 20px;
     }
 
     .name-post2{
@@ -524,13 +536,15 @@ padding:5px;
   }  
        .avatar_post{
         position: absolute;
-        
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
+        margin-top: 5px;
+        margin-left: 5px;
         border-radius: 50%;
         overflow: hidden;
         background: #c8c;
-        border: 3px solid #fff;}
+        border: 3px solid #fff;  
+      }
 
     .avatar_post img{
           position: absolute;
@@ -541,7 +555,7 @@ padding:5px;
           -ms-transform: translate(-50%, -50%);
           -o-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-          width: 80px;
+          width: 60px;
           height: auto;
         }  
        .box-content{
@@ -643,3 +657,39 @@ padding:5px;
 
 .left
 {float: left;}
+
+
+#produc-list{
+    padding: 1rem;
+}
+#iconList{
+    float:right;
+    margin-top: 1.5rem;
+}
+.iconList{
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+/* estilos vitrina individual */
+.perfilVitrina{
+    background-color: #ffffff;
+}
+
+.divDatos{
+    border-radius:4px!important;
+    margin-top: 10px;
+    border: 1px solid#e5e5e5;
+}
+.azulBanigualdad{
+    color:#0082d8; 
+}
+
+.card{
+  padding-bottom: 15px;
+}
+.icon-post{
+  padding: 10px;
+}
+/* termino estilo vitrina individual */
